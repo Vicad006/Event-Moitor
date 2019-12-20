@@ -40,95 +40,123 @@ public class Members {
 
 
     Members() {
-
     }
+
+    public Members(String sName, String fName, String email, String phoneNum,
+                   String address, Date birthday, String postCode, Department department,
+                   Gender gender, MaritalStatus maritalStatus) {
+
+        this.sName = sName;
+        this.fName = fName;
+        this.email = email;
+        this.phoneNum = phoneNum;
+        this.address = address;
+        this.birthday = birthday;
+        this.postCode = postCode;
+        this.department = department;
+        this.gender = gender;
+        this.maritalStatus = maritalStatus;
+    }
+
 
     public int getId() {
         return id;
-    }
-
-    public String getsName() {
-        return sName;
-    }
-
-    public String getfName() {
-        return fName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public List<Message> getMessageRecipient() {
-        return messageRecipient;
-    }
-
-    public List<Message> getMessageSender() {
-        return messageSender;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
+    public String getsName() {
+        return sName;
+    }
+
     public void setsName(String sName) {
         this.sName = sName;
+    }
+
+    public String getfName() {
+        return fName;
     }
 
     public void setfName(String fName) {
         this.fName = fName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
     }
 
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Date getBirthday() {
+        return birthday;
     }
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
+    public String getPostCode() {
+        return postCode;
+    }
+
     public void setPostCode(String postCode) {
         this.postCode = postCode;
+    }
+
+    public Department getDepartment() {
+        return department;
     }
 
     public void setDepartment(Department department) {
         this.department = department;
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public MaritalStatus getMaritalStatus() {
+        return maritalStatus;
     }
 
     public void setMaritalStatus(MaritalStatus maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
+    public List<Message> getMessageRecipient() {
+        return messageRecipient;
+    }
+
     public void setMessageRecipient(List<Message> messageRecipient) {
         this.messageRecipient = messageRecipient;
+    }
+
+    public List<Message> getMessageSender() {
+        return messageSender;
     }
 
     public void setMessageSender(List<Message> messageSender) {

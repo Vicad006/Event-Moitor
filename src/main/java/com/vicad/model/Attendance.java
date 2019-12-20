@@ -13,7 +13,7 @@ public class Attendance {
     private Date regDate;
     private String attendance;
     private int userId;
-    private  int depId;
+
 
     @ManyToOne
     @JoinColumn(name = "member_id")
@@ -61,11 +61,5 @@ public class Attendance {
         this.userId = userId;
     }
 
-    public int getDepId() {
-        return depId;
-    }
 
-    public void setDepId(int depId) {
-        this.depId = depId;
-    }
 }

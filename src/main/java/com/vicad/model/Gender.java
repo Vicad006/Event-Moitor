@@ -13,6 +13,8 @@ public class Gender {
     @Id
     @GeneratedValue
     private int id;
+    private String details;
+
 
 
 
@@ -20,12 +22,28 @@ public class Gender {
     private List <Members> members;
 
 
+    Gender (){
+
+    }
+
+    public Gender(String details) {
+        this.details = details;
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     public List<Members> getMembers() {
