@@ -78,20 +78,16 @@ public class Department {
         this.deptCode = deptCode;
     }
 
-    public List<Members> getMembers() {
-        return members;
-    }
-
     public void setMembers(List<Members> members) {
         this.members = members;
     }
 
-    public List<Attendance> getAttendance() {
-        return attendance;
-    }
-
     public void setAttendance(List<Attendance> attendance) {
         this.attendance = attendance;
+    }
+
+    public List<Members> getMembers() {
+        return members;
     }
 }
 

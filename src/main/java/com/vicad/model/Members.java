@@ -123,43 +123,16 @@ public class Members {
         this.postCode = postCode;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
 
     public void setDepartment(Department department) {
         this.department = department;
-    }
-
-    public Gender getGender() {
-        return gender;
     }
 
     public void setGender(Gender gender) {
         this.gender = gender;
     }
 
-    public MaritalStatus getMaritalStatus() {
-        return maritalStatus;
-    }
-
-    public void setMaritalStatus(MaritalStatus maritalStatus) {
-        this.maritalStatus = maritalStatus;
-    }
-
-    public List<Message> getMessageRecipient() {
-        return messageRecipient;
-    }
-
-    public void setMessageRecipient(List<Message> messageRecipient) {
-        this.messageRecipient = messageRecipient;
-    }
-
-    public List<Message> getMessageSender() {
-        return messageSender;
-    }
-
-    public void setMessageSender(List<Message> messageSender) {
-        this.messageSender = messageSender;
+    public Integer getDepartment() {
+        return department.getId();
     }
 }

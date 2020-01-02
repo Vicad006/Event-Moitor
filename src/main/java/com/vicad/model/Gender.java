@@ -46,10 +46,6 @@ public class Gender {
         this.details = details;
     }
 
-    public List<Members> getMembers() {
-        return members;
-    }
-
     public void setMembers(List<Members> members) {
         this.members = members;
     }
