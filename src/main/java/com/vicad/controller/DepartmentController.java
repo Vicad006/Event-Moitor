@@ -23,8 +23,8 @@ public class DepartmentController {
     }
 
 
-    @GetMapping("department")
-    public List<Department> getAl(){
+    @GetMapping("/department")
+    public List<Department> getAll(){
         List<Department> departments = departmentService.getAllDepartment();
         return departments;
     }
