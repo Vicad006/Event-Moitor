@@ -17,7 +17,6 @@ public class Gender {
 
 
 
-
     @OneToMany(mappedBy = "gender")
     private List <Members> members;
 

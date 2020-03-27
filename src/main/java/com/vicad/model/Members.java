@@ -132,7 +132,15 @@ public class Members {
         this.gender = gender;
     }
 
-    public Integer getDepartment() {
-        return department.getId();
+    public Department getDepartment() {
+        return department;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public MaritalStatus getMaritalStatus() {
+        return maritalStatus;
     }
 }

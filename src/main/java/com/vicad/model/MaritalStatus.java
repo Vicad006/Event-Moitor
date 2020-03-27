@@ -1,6 +1,8 @@
 package com.vicad.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,7 +22,6 @@ public class MaritalStatus {
 
 
     MaritalStatus (){
-
 
     }
 
@@ -46,6 +47,7 @@ public class MaritalStatus {
         this.status = status;
     }
 
+    @JsonIgnore
     public List<Members> getMembers() {
         return members;
     }

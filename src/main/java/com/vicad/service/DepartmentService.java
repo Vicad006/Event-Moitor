@@ -19,17 +19,6 @@ public class DepartmentService {
     }
 
 
-    /*
-        public Department getOneDepartment(Integer id){
-
-        Optional<Department> department = departmentRepo.findById(id);
-
-
-        return  department.get();}
-
-      */
-
-
     public Optional <Department> getOneDepartment(Integer id){
 
 

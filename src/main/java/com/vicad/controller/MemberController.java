@@ -14,6 +14,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200", maxAge=3600)
 @RestController
 public class MemberController {
 
@@ -73,9 +74,8 @@ public class MemberController {
 
     }
 
-    // Deletes a specific department
-    @DeleteMapping("/department/{id}")
-    public void removeDepartment(@PathVariable Integer id) {
+    @DeleteMapping("/member/{id}")
+    public void removeMember(@PathVariable Integer id) {
         memberService.deleteRecord(id);
     }
 

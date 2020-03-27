@@ -56,15 +56,6 @@ public class LoadExcel {
         }
 
 
-         /*
-           ==================================================================
-           Iterating over all the rows and columns in a Sheet (Multiple ways)
-           ==================================================================
-        */
-
-
-
-        // Getting the sheet at index zero; Gender data
         Sheet genderSheet = workbook.getSheetAt(0);
         List<List<String>> genderTableRows = this.readData(genderSheet);
 
@@ -76,8 +67,6 @@ public class LoadExcel {
             genderRepo.save(gender);
         }
 
-
-        // Getting the sheet at index One; Marital Status data
 
         Sheet maritalStatusSheet = workbook.getSheetAt(1);
         List<List<String>> maritalStatusTableRows = this.readData(maritalStatusSheet);
@@ -92,8 +81,6 @@ public class LoadExcel {
         }
 
 
-
-        // Getting the Sheet at index two ; Department data
         Sheet departmentSheet = workbook.getSheetAt(2);
         List<List<String>> departmentTableRows = this.readData(departmentSheet);
 
@@ -108,9 +95,6 @@ public class LoadExcel {
 
         }
 
-
-
-        // Getting the Sheet at index three ; Member data
         Sheet membersSheet = workbook.getSheetAt(3);
         List<List<String>> membersTableRows = this.readData(membersSheet);
 
@@ -152,19 +136,6 @@ public class LoadExcel {
 
 
 
-       /* Members members = membersRepo.findByFName("Olorunda");
-
-        System.out.println("Member name is " +members.getfName());
-
-        System.out.println("Department name is " +members.getDepartment().getName());
-
-
-        System.out.println("Gender is " +members.getGender().getDetails());*/
-
-
-
-        // Closing the workbook
-
         try{
             workbook.close();
 
@@ -176,10 +147,8 @@ public class LoadExcel {
     public List<List<String>> readData(Sheet sheet){
 
 
-        // Create a DataFormatter to format and get each cell's value as String
         DataFormatter dataFormatter = new DataFormatter();
 
-        // 1. You can obtain a rowIterator and columnIterator and iterate over them
         System.out.println("\n\nIterating over Rows and Columns using Iterator\n");
 
         Iterator<Row> rowIterator = sheet.rowIterator();
@@ -195,7 +164,6 @@ public class LoadExcel {
 
             Row row = rowIterator.next();
 
-            // Now let's iterate over the columns of the current row
             Iterator<Cell> cellIterator = row.cellIterator();
 
             while (cellIterator.hasNext()) {

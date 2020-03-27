@@ -1,6 +1,8 @@
 package com.vicad.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -62,10 +64,6 @@ public class Department {
         this.description = description;
     }
 
-    public Date getRegTime() {
-        return regTime;
-    }
-
     public void setRegTime(Date regTime) {
         this.regTime = regTime;
     }
@@ -86,6 +84,7 @@ public class Department {
         this.attendance = attendance;
     }
 
+    @JsonIgnore
     public List<Members> getMembers() {
         return members;
     }
